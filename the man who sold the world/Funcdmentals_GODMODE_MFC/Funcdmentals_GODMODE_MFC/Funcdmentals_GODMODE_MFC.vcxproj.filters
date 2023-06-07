@@ -15,6 +15,12 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Funcdmentals_GODMODE_MFC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Funcdmentals_GODMODE_MFCDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="framework.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -24,25 +30,33 @@
     <ClInclude Include="Resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Filer.h">
+    <ClInclude Include="pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Filer.cpp">
+    <ClCompile Include="Funcdmentals_GODMODE_MFC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Funcdmentals_GODMODE_MFCDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="Filer.rc">
+    <ResourceCompile Include="FuncdmentalsGODMODEMFC.rc">
       <Filter>Resource Files</Filter>
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="small.ico">
+    <None Include="res\FuncdmentalsGODMODEMFC.rc2">
       <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="Filer.ico">
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\Funcdmentals_GODMODE_MFC.ico">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>
