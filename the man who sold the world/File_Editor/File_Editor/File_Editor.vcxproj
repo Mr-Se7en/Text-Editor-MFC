@@ -183,15 +183,18 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="copy_window_class.h" />
     <ClInclude Include="File_Editor.h" />
     <ClInclude Include="File_EditorDlg.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="open_window_class.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Resource.h" />
+    <ClInclude Include="streamopener.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="copy_window_class.cpp" />
     <ClCompile Include="File_Editor.cpp" />
     <ClCompile Include="File_EditorDlg.cpp" />
     <ClCompile Include="open_window_class.cpp" />
@@ -201,6 +204,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="streamopener.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="FileEditor.rc" />

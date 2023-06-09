@@ -8,6 +8,7 @@
 #include "File_EditorDlg.h"
 #include "afxdialogex.h"
 #include"open_window_class.h"
+#include"copy_window_class.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -203,7 +204,8 @@ void CFileEditorDlg::OnBnClickedOpen()
 
 void CFileEditorDlg::OnBnClickedCopy()
 {
-	
+	copy_window_class copy;
+	copy.DoModal();
 }
 
 

@@ -36,6 +36,12 @@
     <ClInclude Include="open_window_class.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="copy_window_class.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="streamopener.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="File_Editor.cpp">
@@ -48,6 +54,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="open_window_class.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="copy_window_class.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="streamopener.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

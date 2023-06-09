@@ -9,19 +9,20 @@
 #include <fstream>
 #include <windows.h>
 #include <shellapi.h>
+#include "streamopener.h"
 
 // Extra functions 
-void stream_opener(CString filepath, std::ifstream& my_stream) {
-	try {
-		my_stream.open(filepath, std::ios::binary);
-		if (!my_stream) {
-			throw 10;
-		}
-	}
-	catch (int x) {
-		int msgboxID = MessageBox(NULL,(LPCWSTR)L"failed to open file try again",NULL,NULL);
-	}
-}
+//void stream_opener(CString filepath, std::ifstream& my_stream) {
+//	try {
+//		my_stream.open(filepath, std::ios::binary);
+//		if (!my_stream) {
+//			throw 10;
+//		}
+//	}
+//	catch (int x) {
+//		int msgboxID = MessageBox(NULL,(LPCWSTR)L"failed to open file try again",NULL,NULL);
+//	}
+//}
 
 // open_window_class dialog
 
@@ -55,7 +56,7 @@ END_MESSAGE_MAP()
 
 
 // open_window_class message handlers
-CString fileName, filePath, read_alt;
+CString filePath_open, read_alt;
 bool filePathed=false;
 
 void open_window_class::OnBnClickedBrowseButton()
@@ -64,13 +65,13 @@ void open_window_class::OnBnClickedBrowseButton()
 	LPCSTR pszrFilter = str.c_str();
 	CFileDialog dlgFile(TRUE, _T("txt"), _T("document.txt"), OFN_FILEMUSTEXIST | OFN_HIDEREADONLY, _T("Text Files (*.txt)|*.txt|All Files (*.*)|*.*||"), AfxGetMainWnd());
 	if (IDOK == dlgFile.DoModal()) {
-		filePath = dlgFile.GetPathName();
-		Open_Addresss = filePath;
+		filePath_open = dlgFile.GetPathName();
+		Open_Addresss = filePath_open;
 		UpdateData(false);
 		filePathed = true;
 	}
 	std::ifstream my_stream;
-	stream_opener(filePath, my_stream);
+	stream_opener(filePath_open, my_stream);
 	wchar_t charbuf;
 	CString read;
 	while (my_stream) {
@@ -93,7 +94,7 @@ void open_window_class::OnBnClickedButton4()//open
 {
 	if (filePathed) {
 		if (open_checkbox_control.GetCheck()) {
-			HINSTANCE result = ShellExecute(NULL, L"open", filePath, NULL, NULL, SW_SHOWNORMAL);
+			HINSTANCE result = ShellExecute(NULL, L"open", filePath_open, NULL, NULL, SW_SHOWNORMAL);
 		}
 		else {
 			Open_View = read_alt;
