@@ -20,9 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
-    <ProjectGuid>{E1223BA5-1835-4B08-8895-4598A5559706}</ProjectGuid>
+    <ProjectGuid>{6C50C704-D218-4CCD-9522-6704155EE72F}</ProjectGuid>
     <Keyword>MFCProj</Keyword>
-    <RootNamespace>FuncdmentalsGODMODEMFC</RootNamespace>
+    <RootNamespace>FileEditor</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -183,16 +183,18 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="File_Editor.h" />
+    <ClInclude Include="File_EditorDlg.h" />
     <ClInclude Include="framework.h" />
-    <ClInclude Include="Funcdmentals_GODMODE_MFC.h" />
-    <ClInclude Include="Funcdmentals_GODMODE_MFCDlg.h" />
+    <ClInclude Include="open_window_class.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Funcdmentals_GODMODE_MFC.cpp" />
-    <ClCompile Include="Funcdmentals_GODMODE_MFCDlg.cpp" />
+    <ClCompile Include="File_Editor.cpp" />
+    <ClCompile Include="File_EditorDlg.cpp" />
+    <ClCompile Include="open_window_class.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -201,13 +203,13 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="FuncdmentalsGODMODEMFC.rc" />
+    <ResourceCompile Include="FileEditor.rc" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="res\FuncdmentalsGODMODEMFC.rc2" />
+    <None Include="res\FileEditor.rc2" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="res\Funcdmentals_GODMODE_MFC.ico" />
+    <Image Include="res\File_Editor.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

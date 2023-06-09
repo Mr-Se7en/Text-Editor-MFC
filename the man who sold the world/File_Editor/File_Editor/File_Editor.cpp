@@ -1,27 +1,27 @@
 
-// Funcdmentals_GODMODE_MFC.cpp : Defines the class behaviors for the application.
+// File_Editor.cpp : Defines the class behaviors for the application.
 //
 
 #include "pch.h"
 #include "framework.h"
-#include "Funcdmentals_GODMODE_MFC.h"
-#include "Funcdmentals_GODMODE_MFCDlg.h"
+#include "File_Editor.h"
+#include "File_EditorDlg.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
 
 
-// CFuncdmentalsGODMODEMFCApp
+// CFileEditorApp
 
-BEGIN_MESSAGE_MAP(CFuncdmentalsGODMODEMFCApp, CWinApp)
+BEGIN_MESSAGE_MAP(CFileEditorApp, CWinApp)
 	ON_COMMAND(ID_HELP, &CWinApp::OnHelp)
 END_MESSAGE_MAP()
 
 
-// CFuncdmentalsGODMODEMFCApp construction
+// CFileEditorApp construction
 
-CFuncdmentalsGODMODEMFCApp::CFuncdmentalsGODMODEMFCApp()
+CFileEditorApp::CFileEditorApp()
 {
 	// support Restart Manager
 	m_dwRestartManagerSupportFlags = AFX_RESTART_MANAGER_SUPPORT_RESTART;
@@ -31,14 +31,14 @@ CFuncdmentalsGODMODEMFCApp::CFuncdmentalsGODMODEMFCApp()
 }
 
 
-// The one and only CFuncdmentalsGODMODEMFCApp object
+// The one and only CFileEditorApp object
 
-CFuncdmentalsGODMODEMFCApp theApp;
+CFileEditorApp theApp;
 
 
-// CFuncdmentalsGODMODEMFCApp initialization
+// CFileEditorApp initialization
 
-BOOL CFuncdmentalsGODMODEMFCApp::InitInstance()
+BOOL CFileEditorApp::InitInstance()
 {
 	// InitCommonControlsEx() is required on Windows XP if an application
 	// manifest specifies use of ComCtl32.dll version 6 or later to enable
@@ -71,7 +71,7 @@ BOOL CFuncdmentalsGODMODEMFCApp::InitInstance()
 	// such as the name of your company or organization
 	SetRegistryKey(_T("Local AppWizard-Generated Applications"));
 
-	CFuncdmentalsGODMODEMFCDlg dlg;
+	CFileEditorDlg dlg;
 	m_pMainWnd = &dlg;
 	INT_PTR nResponse = dlg.DoModal();
 	if (nResponse == IDOK)

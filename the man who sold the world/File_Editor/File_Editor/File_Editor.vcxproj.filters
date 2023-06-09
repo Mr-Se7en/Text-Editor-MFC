@@ -15,10 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Funcdmentals_GODMODE_MFC.h">
+    <ClInclude Include="File_Editor.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Funcdmentals_GODMODE_MFCDlg.h">
+    <ClInclude Include="File_EditorDlg.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="framework.h">
@@ -33,30 +33,36 @@
     <ClInclude Include="pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="open_window_class.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Funcdmentals_GODMODE_MFC.cpp">
+    <ClCompile Include="File_Editor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Funcdmentals_GODMODE_MFCDlg.cpp">
+    <ClCompile Include="File_EditorDlg.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="pch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="open_window_class.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="FuncdmentalsGODMODEMFC.rc">
+    <ResourceCompile Include="FileEditor.rc">
       <Filter>Resource Files</Filter>
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="res\FuncdmentalsGODMODEMFC.rc2">
+    <None Include="res\FileEditor.rc2">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="res\Funcdmentals_GODMODE_MFC.ico">
+    <Image Include="res\File_Editor.ico">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>

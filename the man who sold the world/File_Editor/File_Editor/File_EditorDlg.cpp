@@ -1,12 +1,13 @@
 
-// Funcdmentals_GODMODE_MFCDlg.cpp : implementation file
+// File_EditorDlg.cpp : implementation file
 //
 
 #include "pch.h"
 #include "framework.h"
-#include "Funcdmentals_GODMODE_MFC.h"
-#include "Funcdmentals_GODMODE_MFCDlg.h"
+#include "File_Editor.h"
+#include "File_EditorDlg.h"
 #include "afxdialogex.h"
+#include"open_window_class.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -46,31 +47,36 @@ BEGIN_MESSAGE_MAP(CAboutDlg, CDialogEx)
 END_MESSAGE_MAP()
 
 
-// CFuncdmentalsGODMODEMFCDlg dialog
+// CFileEditorDlg dialog
 
 
 
-CFuncdmentalsGODMODEMFCDlg::CFuncdmentalsGODMODEMFCDlg(CWnd* pParent /*=nullptr*/)
-	: CDialogEx(IDD_FUNCDMENTALS_GODMODE_MFC_DIALOG, pParent)
+CFileEditorDlg::CFileEditorDlg(CWnd* pParent /*=nullptr*/)
+	: CDialogEx(IDD_FILE_EDITOR_DIALOG, pParent)
 {
 	m_hIcon = AfxGetApp()->LoadIcon(IDR_MAINFRAME);
 }
 
-void CFuncdmentalsGODMODEMFCDlg::DoDataExchange(CDataExchange* pDX)
+void CFileEditorDlg::DoDataExchange(CDataExchange* pDX)
 {
 	CDialogEx::DoDataExchange(pDX);
 }
 
-BEGIN_MESSAGE_MAP(CFuncdmentalsGODMODEMFCDlg, CDialogEx)
+BEGIN_MESSAGE_MAP(CFileEditorDlg, CDialogEx)
 	ON_WM_SYSCOMMAND()
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
+	ON_BN_CLICKED(IDCANCEL, &CFileEditorDlg::OnBnClickedCancel)
+	ON_BN_CLICKED(encryption, &CFileEditorDlg::OnBnClickedencryption)
+	ON_BN_CLICKED(IDC_Open, &CFileEditorDlg::OnBnClickedOpen)
+	ON_BN_CLICKED(IDC_Copy, &CFileEditorDlg::OnBnClickedCopy)
+	ON_BN_CLICKED(IDC_Exit, &CFileEditorDlg::OnBnClickedExit)
 END_MESSAGE_MAP()
 
 
-// CFuncdmentalsGODMODEMFCDlg message handlers
+// CFileEditorDlg message handlers
 
-BOOL CFuncdmentalsGODMODEMFCDlg::OnInitDialog()
+BOOL CFileEditorDlg::OnInitDialog()
 {
 	CDialogEx::OnInitDialog();
 
@@ -100,11 +106,12 @@ BOOL CFuncdmentalsGODMODEMFCDlg::OnInitDialog()
 	SetIcon(m_hIcon, FALSE);		// Set small icon
 
 	// TODO: Add extra initialization here
-
+	
+	//open_window_class.create(IDD_OPEN_dlg, this);
 	return TRUE;  // return TRUE  unless you set the focus to a control
 }
 
-void CFuncdmentalsGODMODEMFCDlg::OnSysCommand(UINT nID, LPARAM lParam)
+void CFileEditorDlg::OnSysCommand(UINT nID, LPARAM lParam)
 {
 	if ((nID & 0xFFF0) == IDM_ABOUTBOX)
 	{
@@ -121,7 +128,7 @@ void CFuncdmentalsGODMODEMFCDlg::OnSysCommand(UINT nID, LPARAM lParam)
 //  to draw the icon.  For MFC applications using the document/view model,
 //  this is automatically done for you by the framework.
 
-void CFuncdmentalsGODMODEMFCDlg::OnPaint()
+void CFileEditorDlg::OnPaint()
 {
 	if (IsIconic())
 	{
@@ -148,8 +155,59 @@ void CFuncdmentalsGODMODEMFCDlg::OnPaint()
 
 // The system calls this function to obtain the cursor to display while the user drags
 //  the minimized window.
-HCURSOR CFuncdmentalsGODMODEMFCDlg::OnQueryDragIcon()
+HCURSOR CFileEditorDlg::OnQueryDragIcon()
 {
 	return static_cast<HCURSOR>(m_hIcon);
 }
 
+
+
+void CFileEditorDlg::OnBnClickedCancel()
+{
+	// TODO: Add your control notification handler code here
+	CDialogEx::OnCancel();
+}
+
+
+//void CFileEditorDlg::OnBnClickedButton4()//exit
+//{
+//
+//}
+//
+//
+//void CFileEditorDlg::OnBnClickedButton2()//open
+//{
+//	
+//}
+
+
+//void CFileEditorDlg::OnBnClickedButton3()//copy
+//{
+	
+
+
+
+
+void CFileEditorDlg::OnBnClickedencryption()
+{
+	
+}
+
+
+void CFileEditorDlg::OnBnClickedOpen()
+{
+	open_window_class open;
+	open.DoModal();
+}
+
+
+void CFileEditorDlg::OnBnClickedCopy()
+{
+	
+}
+
+
+void CFileEditorDlg::OnBnClickedExit()
+{
+	exit(0);
+}
