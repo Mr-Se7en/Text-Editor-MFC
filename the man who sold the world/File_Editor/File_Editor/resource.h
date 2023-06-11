@@ -3,6 +3,7 @@
 // Used by FileEditor.rc
 //
 #define IDM_ABOUTBOX                    0x0010
+#define IDI_Silly_icon                  16
 #define IDD_ABOUTBOX                    100
 #define IDS_ABOUTBOX                    101
 #define IDD_FILE_EDITOR_DIALOG          102
@@ -10,6 +11,7 @@
 #define IDD_OPEN_dlg                    130
 #define IDD_COPY_dlg                    132
 #define IDD_ENCRYPTION                  134
+#define IDI_ICON1                       140
 #define IDC_BUTTON1                     1000
 #define encryption                      1000
 #define IDC_Copy_browse                 1000
@@ -51,7 +53,7 @@
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        136
+#define _APS_NEXT_RESOURCE_VALUE        141
 #define _APS_NEXT_COMMAND_VALUE         32771
 #define _APS_NEXT_CONTROL_VALUE         1035
 #define _APS_NEXT_SYMED_VALUE           101

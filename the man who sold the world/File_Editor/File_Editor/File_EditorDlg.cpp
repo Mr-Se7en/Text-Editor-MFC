@@ -56,7 +56,7 @@ END_MESSAGE_MAP()
 CFileEditorDlg::CFileEditorDlg(CWnd* pParent /*=nullptr*/)
 	: CDialogEx(IDD_FILE_EDITOR_DIALOG, pParent)
 {
-	m_hIcon = AfxGetApp()->LoadIcon(IDR_MAINFRAME);
+	m_hIcon = AfxGetApp()->LoadIcon(IDI_Silly_icon);
 }
 
 void CFileEditorDlg::DoDataExchange(CDataExchange* pDX)

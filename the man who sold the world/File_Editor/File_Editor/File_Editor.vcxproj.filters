@@ -86,5 +86,14 @@
     <Image Include="res\File_Editor.ico">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="..\..\..\..\..\Libraries\Downloads\profileIcon_1hk5eo94d8542.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\..\..\..\..\Libraries\Downloads\profileIcon_1hk5eo94d8542 (1).ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\..\..\..\..\Libraries\Downloads\gigachad (1).ico">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>
