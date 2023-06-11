@@ -93,6 +93,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -183,7 +184,9 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="caeser%27s_chiper.h" />
     <ClInclude Include="copy_window_class.h" />
+    <ClInclude Include="Encryption_window_class.h" />
     <ClInclude Include="File_Editor.h" />
     <ClInclude Include="File_EditorDlg.h" />
     <ClInclude Include="framework.h" />
@@ -195,6 +198,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="copy_window_class.cpp" />
+    <ClCompile Include="Encryption_window_class.cpp" />
     <ClCompile Include="File_Editor.cpp" />
     <ClCompile Include="File_EditorDlg.cpp" />
     <ClCompile Include="open_window_class.cpp" />

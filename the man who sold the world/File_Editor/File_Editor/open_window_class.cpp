@@ -72,7 +72,7 @@ void open_window_class::OnBnClickedBrowseButton()
 	}
 	std::ifstream my_stream;
 	stream_opener(filePath_open, my_stream);
-	wchar_t charbuf;
+	char charbuf;
 	CString read;
 	while (my_stream) {
 		charbuf = my_stream.get();

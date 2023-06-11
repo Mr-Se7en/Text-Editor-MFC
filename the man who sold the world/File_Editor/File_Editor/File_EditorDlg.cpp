@@ -9,6 +9,7 @@
 #include "afxdialogex.h"
 #include"open_window_class.h"
 #include"copy_window_class.h"
+#include "Encryption_window_class.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -191,7 +192,8 @@ void CFileEditorDlg::OnBnClickedCancel()
 
 void CFileEditorDlg::OnBnClickedencryption()
 {
-	
+	Encryption_window_class encrypt;
+	encrypt.DoModal();
 }
 
 

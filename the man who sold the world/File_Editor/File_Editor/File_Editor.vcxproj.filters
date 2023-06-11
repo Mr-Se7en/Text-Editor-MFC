@@ -42,6 +42,12 @@
     <ClInclude Include="streamopener.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Encryption_window_class.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="caeser%27s_chiper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="File_Editor.cpp">
@@ -60,6 +66,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="streamopener.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Encryption_window_class.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

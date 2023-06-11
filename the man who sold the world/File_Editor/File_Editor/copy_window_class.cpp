@@ -42,7 +42,8 @@ END_MESSAGE_MAP()
 
 
 // copy_window_class message handlers
-CString filePath_copy, filePath_des_copy, read_copy;
+CString filePath_copy, filePath_des_copy;
+std::wstring read_copy_buf_w,read_copy_w;
 
 void copy_window_class::OnBnClickedCopybrowse()
 {
@@ -56,13 +57,15 @@ void copy_window_class::OnBnClickedCopybrowse()
 	}
 	std::ifstream my_stream;
 	stream_opener(filePath_copy, my_stream);
-	char charbuf_copy;
+	wchar_t charbuf_copy;
 	while (my_stream) {
 		charbuf_copy = my_stream.get();
 		if (charbuf_copy == 'ÿ')
 			break;
-		read_copy += charbuf_copy;
+		read_copy_buf_w += charbuf_copy;
 	}
+	read_copy_w = read_copy_buf_w;
+	read_copy_buf_w = L"";
 	my_stream.close();
 }
 
@@ -80,10 +83,9 @@ void copy_window_class::OnBnClickedCopydesbrowse()
 }
 void copy_window_class::OnBnClickedCopySaveAs()
 {
-	std::wstring read_copy_alt = CW2T(read_copy);
 	std::wofstream my_stream_out;
 	stream_opener(filePath_des_copy, my_stream_out);
-	my_stream_out << read_copy_alt;
+	my_stream_out << read_copy_w;
 	my_stream_out.close();
 	CDialogEx::OnCancel();
 }
