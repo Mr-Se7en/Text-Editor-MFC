@@ -171,6 +171,25 @@ void CFileEditorDlg::OnBnClickedCancel()
 }
 
 
+//void CFileEditorDlg::OnBnClickedButton4()//exit
+//{
+//
+//}
+//
+//
+//void CFileEditorDlg::OnBnClickedButton2()//open
+//{
+//	
+//}
+
+
+//void CFileEditorDlg::OnBnClickedButton3()//copy
+//{
+	
+
+
+
+
 void CFileEditorDlg::OnBnClickedencryption()
 {
 	Encryption_window_class encrypt;
